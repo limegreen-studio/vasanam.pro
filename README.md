@@ -44,7 +44,11 @@ GNU GPL v3.0 — `LICENSE` file paarunga. Free software, thaaraala maathunga, sh
 
 ## Contributing
 
-`CONTRIBUTING.md` paarunga, simple steps thaan.
+`CONTRIBUTING.md` paarunga, simple steps thaan. Upcoming features and planned work — `PIPELINE.md` paarunga.
+
+## Content Disclaimer
+
+All dialogues, audio, and associated media featured in VASANAM.PRO are the intellectual property of their respective producers, studios, and creative artists. This project is a non-commercial fan tribute and makes no claim of ownership over any of the source material.
 
 ---
 

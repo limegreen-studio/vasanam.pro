@@ -1,28 +1,10 @@
 [
   {
-    "dialogue": "Aahaan?",
-    "highlights": [
-      {
-        "textToHighlight": "Aahaan",
-        "image": "https://podu.pics/placeholder/01-aahaan.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Eppa!! Kelambiruchu pa, kelambiruchu pa!",
-    "highlights": [
-      {
-        "textToHighlight": "Kelambiruchu",
-        "image": "https://podu.pics/placeholder/02-kelambiruchu.jpg"
-      }
-    ]
-  },
-  {
     "dialogue": "Naanga adi vangatha areave kedayathu.",
     "highlights": [
       {
         "textToHighlight": "adi",
-        "image": "https://podu.pics/placeholder/03-adi.jpg"
+        "image": "https://podu.pics/6pmSbqPH_w"
       }
     ]
   },
@@ -30,8 +12,8 @@
     "dialogue": "Nallavanukku nalladhu seyradhula verum aasai dhaan irukkum. Kettavanukku kettadhu seyradhula peraasai irukkum.",
     "highlights": [
       {
-        "textToHighlight": "Nallavanukku",
-        "image": "https://podu.pics/placeholder/04-nallavanukku.jpg"
+        "textToHighlight": "Kettavanukku",
+        "image": "https://podu.pics/keIPrycfZI"
       }
     ]
   },
@@ -40,7 +22,7 @@
     "highlights": [
       {
         "textToHighlight": "vaangiyachu",
-        "image": "https://podu.pics/placeholder/05-vaangiyachu.jpg"
+        "image": "https://podu.pics/sjA_mcb8W4"
       }
     ]
   },
@@ -49,16 +31,7 @@
     "highlights": [
       {
         "textToHighlight": "korangu",
-        "image": "https://podu.pics/placeholder/06-korangu.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Namma vaazhanum semmaya vaazhandaandanu sollra maadhiri vaazhanum. Adhukku thevaina edhuvum seyyalaam. Evanaiyum kollalaam, thappillai.",
-    "highlights": [
-      {
-        "textToHighlight": "kollalaam",
-        "image": "https://podu.pics/placeholder/07-kollalaam.jpg"
+        "image": "https://podu.pics/FZ8LSnnv9E"
       }
     ]
   },
@@ -66,26 +39,17 @@
     "dialogue": "Why blood? Same blood.",
     "highlights": [
       {
-        "textToHighlight": "blood",
-        "image": "https://podu.pics/placeholder/08-blood.jpg"
+        "textToHighlight": "Oorum blood",
+        "image": "https://podu.pics/4uvWXpb_pC"
       }
     ]
   },
   {
-    "dialogue": "kiyaaree settingaa. Vengaiyan magan othaila nikka. Dhillu irundhaa moththamaa vaanga.",
+    "dialogue": "kiyaaree settingaa. Vengaiyan mavan othaila nikka. Dhillu irundhaa moththamaa vaanga le.",
     "highlights": [
       {
         "textToHighlight": "Dhillu",
-        "image": "https://podu.pics/placeholder/09-dhillu.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Ungaluku ellam kaattukku raajaavaana singathoda kathai dhaan theriyum. Andha singathaiye kaalam kaalama dummy panni oda vidura hyenava theriyadhula. Idhu appadippatta oru hyenavoda kathai. Singathai varutheduthu vedhanaipaduthi, adhai anu anuvaa rasichu sandhoshapatta hyenavoda kathai.",
-    "highlights": [
-      {
-        "textToHighlight": "hyena",
-        "image": "https://podu.pics/placeholder/10-hyena.jpg"
+        "image": "https://podu.pics/-ILCKv4FGJ"
       }
     ]
   },
@@ -94,7 +58,7 @@
     "highlights": [
       {
         "textToHighlight": "Vada",
-        "image": "https://podu.pics/placeholder/11-vada.jpg"
+        "image": "https://podu.pics/Ez7D5Myy-x"
       }
     ]
   },
@@ -103,34 +67,16 @@
     "highlights": [
       {
         "textToHighlight": "Kabali",
-        "image": "https://podu.pics/placeholder/12-kabali.jpg"
+        "image": "https://podu.pics/kTYjR5GOhhg"
       }
     ]
   },
   {
-    "dialogue": "Thirudanukku thel kottuna pothittu irukkanum. Neenga ellam thirudanunga, naan thelu. Naan kottuna pothittu irukkanum. Ippo nee ennai suttaalum, yen edhukkunnu kekkuradhukku enakku oru naadhi illa. Ennada yaarume illaadhavanukku edhukku ivvalo panam? Yen ithanai pera emaathuraan? Thaane unakku kelvi. Yennaa ennaala mudiyum.",
+    "dialogue": "Thirudanukku thel kottuna pothittu irukkanum. Neenga ellam thirudanunga, naan thelu. Naan kottuna pothittu irukkanum.",
     "highlights": [
       {
         "textToHighlight": "thel",
-        "image": "https://podu.pics/placeholder/13-thel.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Pesikittu iruken mama..!",
-    "highlights": [
-      {
-        "textToHighlight": "mama",
-        "image": "https://podu.pics/placeholder/14-mama.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Build up panrano peela vidrano athu mukkiyam ila. Naama edhu pannalum intha olagam nammala odaney uthu pakanum. Naadhari thanam pannalum naasookka pananum.",
-    "highlights": [
-      {
-        "textToHighlight": "Build",
-        "image": "https://podu.pics/placeholder/15-build.jpg"
+        "image": "https://podu.pics/uaP6XWSn_K"
       }
     ]
   },
@@ -139,88 +85,16 @@
     "highlights": [
       {
         "textToHighlight": "basement",
-        "image": "https://podu.pics/placeholder/16-basement.jpg"
+        "image": "https://podu.pics/eHabQg0TOM"
       }
     ]
   },
   {
-    "dialogue": "Excuchse me? Antha korangu bomma enna vela? ",
+    "dialogue": "Excuse me? Antha korangu bomma enna vela? ",
     "highlights": [
       {
         "textToHighlight": "korangu",
-        "image": "https://podu.pics/placeholder/17-korangu.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Feeling ah? Ena, ena feelinguh? ",
-    "highlights": [
-      {
-        "textToHighlight": "Feeling",
-        "image": "https://podu.pics/placeholder/18-feeling.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Yei, oru uyir innoru uyira kolradhula thappillai. Adhaan nature. Adhunaalathaan kadavul oru uyir kolla innoru uyira padaichirukkaan. Kolradhu thappunna maattukku kombaiyum, paambukku vishathaiyum, thelukku kodukkaiyum edhukku koduthirukkaan?",
-    "highlights": [
-      {
-        "textToHighlight": "uyir",
-        "image": "https://podu.pics/placeholder/19-uyir.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Entha oru vishayathayum plan pannama panna ippadi thaan. plan panni pannanum.. ohkay? Listen to our Thalaivan and plan your 2021!",
-    "highlights": [
-      {
-        "textToHighlight": "Thalaivan",
-        "image": "https://podu.pics/placeholder/20-thalaivan.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Hello.. naa varuthamilla vaalibar sanga thalaivar Kaipulla pesren. Yar pesarathu?",
-    "highlights": [
-      {
-        "textToHighlight": "Kaipulla",
-        "image": "https://podu.pics/placeholder/21-kaipulla.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Ungalukku unmaiyile enga janthu mela akkarai irundha, naanga vaazhra edathulaiye enga lifeah improve pannunga. Athaan correctu.",
-    "highlights": [
-      {
-        "textToHighlight": "janthu",
-        "image": "https://podu.pics/placeholder/22-janthu.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Sandanaa satta kizhiyan dhan ya seiyum! Sandaila kizhiyatha satta enga iruku? Nalla kekuraangaiyya deetialuh.. ",
-    "highlights": [
-      {
-        "textToHighlight": "Sanda",
-        "image": "https://podu.pics/placeholder/23-sanda.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Adhula vaangura mark ellam pathaama, TNPSC examkku vera thaniya oru rendu maasam ukkaarndhu padichu, adhula vaangura cutoff markum use lessa poyi. Amma nagaiya adamaanam vechu collegela seat vaangi, first yearla irundhu fourth year varaikkum vacha arrear ellam fourth yearla moththama clear panni indha societykulla nuzhanjaa.",
-    "highlights": [
-      {
-        "textToHighlight": "TNPSC",
-        "image": "https://podu.pics/placeholder/24-tnpsc.jpg"
-      }
-    ]
-  },
-  {
-    "dialogue": "Idhu Kaala illa. Ennoda kottai. Oru pidi mannukooda nee ingirundhu kondu poga mudiyaadhu.",
-    "highlights": [
-      {
-        "textToHighlight": "Kaala",
-        "image": "https://podu.pics/placeholder/25-kaala.jpg"
+        "image": "https://podu.pics/8OmSFh5WqC"
       }
     ]
   }

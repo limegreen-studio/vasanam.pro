@@ -186,6 +186,7 @@ function App() {
             >
               Lime Green Studios
             </a>
+            <span> &middot; All dialogues and associated media are the intellectual property of their respective producers and creators. Used here solely for non-commercial fan appreciation.</span>
           </footer>
         </ReelStrip>
       </div>

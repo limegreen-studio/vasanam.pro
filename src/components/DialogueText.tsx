@@ -12,7 +12,7 @@ interface DialogueTextProps {
 }
 
 function charClass(i: number, typed: TypedChar[]) {
-  if (i < typed.length) return typed[i].correct ? "text-gold-bright" : "text-error bg-error/10"
+  if (i < typed.length) return typed[i].correct ? "text-white" : "text-error bg-error/10"
   if (i === typed.length) return "text-ink bg-ink/10 animate-pulse"
   return "text-ink-faint"
 }
