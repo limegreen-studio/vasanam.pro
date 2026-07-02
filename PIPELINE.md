@@ -6,7 +6,7 @@ Upcoming features and improvements for VASANAM.PRO. Anyone can pick these up —
 
 - [ ] Add Audio and Haptic Feedback for typing
 - [ ] Replace all `podu.pics/placeholder/...` image links in `public/dialogues.json` with real meme images
-- [ ] Wire up Umami Analytics (`web/index.html` — update `data-website-id` and script `src`)
+- [x] Wire up Umami Analytics (`web/index.html` — update `data-website-id` and script `src`)
 
 ## In Progress
 
