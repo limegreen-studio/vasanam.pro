@@ -28,22 +28,22 @@ export function ResultsCard({
         <p className="mt-1 text-center text-xs text-ink-dim">{result.meme.caption}</p>
       </div>
 
-      <div className="mt-5 grid grid-cols-4 gap-2 text-center tabular-nums">
+      <div className="mt-5 grid grid-cols-4 gap-1 text-center tabular-nums">
         <div>
-          <div className="font-mono text-2xl text-gold-bright">{result.wpm}</div>
-          <div className="text-[11px] uppercase tracking-widest text-ink-faint">wpm</div>
+          <div className="font-mono text-lg text-gold-bright md:text-2xl">{result.wpm}</div>
+          <div className="text-[9px] uppercase tracking-widest text-ink-faint md:text-[11px]">wpm</div>
         </div>
         <div>
-          <div className="font-mono text-2xl text-gold-bright">{result.accuracy}%</div>
-          <div className="text-[11px] uppercase tracking-widest text-ink-faint">accuracy</div>
+          <div className="font-mono text-lg text-gold-bright md:text-2xl">{result.accuracy}%</div>
+          <div className="text-[9px] uppercase tracking-widest text-ink-faint md:text-[11px]">accuracy</div>
         </div>
         <div>
-          <div className="font-mono text-2xl text-gold-bright">{result.elapsedSeconds.toFixed(1)}s</div>
-          <div className="text-[11px] uppercase tracking-widest text-ink-faint">time</div>
+          <div className="font-mono text-lg text-gold-bright md:text-2xl">{result.elapsedSeconds.toFixed(1)}s</div>
+          <div className="text-[9px] uppercase tracking-widest text-ink-faint md:text-[11px]">time</div>
         </div>
         <div>
-          <div className="font-mono text-2xl text-gold-bright">{result.chars}</div>
-          <div className="text-[11px] uppercase tracking-widest text-ink-faint">chars</div>
+          <div className="font-mono text-lg text-gold-bright md:text-2xl">{result.chars}</div>
+          <div className="text-[9px] uppercase tracking-widest text-ink-faint md:text-[11px]">chars</div>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import { Github } from "lucide-react"
 import { HoverWord } from "@/components/HoverWord"
 import { FilmFrame } from "@/components/FilmFrame"
 import { ReelStrip } from "@/components/ReelStrip"
@@ -70,9 +71,19 @@ function App() {
             <div className="font-display text-2xl tracking-wide">
               VASANAM<span className="text-rust">.PRO</span>
             </div>
-            <TextureButton variant="secondary" size="sm" onClick={() => setHistoryOpen(true)}>
-              History
-            </TextureButton>
+            <div className="flex items-center gap-2">
+              <TextureButton variant="secondary" size="sm" onClick={() => setHistoryOpen(true)}>
+                History
+              </TextureButton>
+              <TextureButton
+                variant="secondary"
+                size="sm"
+                onClick={() => window.open("https://github.com/limegreen-studio/vasanam.pro", "_blank", "noreferrer")}
+              >
+                <Github size={14} />
+                Contribute
+              </TextureButton>
+            </div>
           </header>
 
           <main className="mx-auto max-w-5xl px-4 pb-14 pt-16 md:px-8">
