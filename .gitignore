@@ -1,0 +1,5 @@
+node_modules
+dist
+.oxlintrc.json.bak
+*.local
+.DS_Store

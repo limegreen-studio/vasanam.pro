@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+@theme {
+  /* Near-black grays (monkeytype-flat, cinema-dark) */
+  --color-bg: #0b0a0b;
+  --color-bg-soft: #100e10;
+  --color-surface: #161418;
+  --color-surface-2: #1e1b20;
+  --color-border: #2d2a30;
+  --color-border-soft: #211f25;
+
+  /* Film material — used for the reel rails */
+  --color-film: #060506;
+  --color-film-hi: #171418;
+
+  --color-ink: #eae7ea;
+  --color-ink-dim: #97929a;
+  --color-ink-faint: #575059;
+
+  /* Accent — deep maroon / red (replaces the old gold + rust) */
+  --color-gold: #c65563;         /* primary accent (stats, correct, cursor) */
+  --color-gold-bright: #df6c7a;  /* hover / bright accent */
+  --color-rust: #8e2635;         /* deep maroon (brand, shadows, borders) */
+  --color-error: #d9534f;        /* typing errors read as clear red */
+
+  --font-display: 'Anton', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Principle 9: no layout shift on live-updating numbers app-wide */
+  font-variant-numeric: tabular-nums;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(120% 80% at 50% -10%, #151216 0%, var(--color-bg) 55%);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Principle 8: crisper text on macOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Principle 10: kill orphans in body copy */
+  text-wrap: pretty;
+}
+
+h1, h2, h3 {
+  /* Principle 10: balanced headings */
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-bg-soft);
+}
+
+/* ---------------------------------------------------------------------------
+   Film grain — shared overlay used on the page and inside the reel
+--------------------------------------------------------------------------- */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* ===========================================================================
+   THE REEL — the whole site sits inside a single strip of 35mm film
+=========================================================================== */
+
+.reel {
+  position: relative;
+  /* rail width reserved on both sides */
+  --rail: clamp(38px, 7vw, 62px);
+  padding-inline: var(--rail);
+  isolation: isolate;
+  background:
+    /* shading that darkens toward each perforated edge */
+    linear-gradient(90deg,
+      rgba(0,0,0,0.55) 0%,
+      rgba(0,0,0,0) calc(var(--rail) + 8px),
+      rgba(0,0,0,0) calc(100% - var(--rail) - 8px),
+      rgba(0,0,0,0.55) 100%),
+    linear-gradient(180deg, var(--color-film-hi) 0%, #0a080b 45%, var(--color-film) 100%);
+  border-radius: 14px;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.04),
+    0 40px 90px -40px rgba(0,0,0,0.9),
+    inset 0 0 0 1px rgba(255,255,255,0.03),
+    inset 0 0 120px rgba(0,0,0,0.65);
+}
+
+/* grainy emulsion texture baked onto the film body */
+.reel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+}
+
+/* faint vertical scratch streaks for realism */
+.reel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: repeating-linear-gradient(90deg,
+    transparent 0 6px,
+    rgba(255,255,255,0.35) 6px 6.5px,
+    transparent 6.5px 40px);
+}
+
+/* --- The perforated rails ------------------------------------------------ */
+.reel-rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--rail);
+  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 14px;
+  gap: 20px;
+  /* darker matte edge of the strip */
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
+    linear-gradient(90deg, #0a080b, #050405);
+}
+.reel-rail--left { left: 0; border-right: 1px solid rgba(255,255,255,0.03); }
+.reel-rail--right { right: 0; border-left: 1px solid rgba(255,255,255,0.03); }
+
+/* subtle grain on the rail itself so it isn't a flat block */
+.reel-rail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* sprocket hole — punched, with real inset depth (desktop sizing) */
+.sprocket {
+  flex: 0 0 auto;
+  width: 82%;
+  height: 27px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #020202, #0c0a0d);
+  box-shadow:
+    inset 0 3px 4px rgba(0,0,0,0.95),
+    inset 0 -2px 2px rgba(255,255,255,0.05),
+    0 1px 0 rgba(255,255,255,0.05),
+    0 -1px 0 rgba(0,0,0,0.6);
+}
+
+/* faint maroon frame markers on the rail, like film edge print */
+.reel-frame-mark {
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: color-mix(in srgb, var(--color-gold) 70%, transparent);
+  transform: rotate(90deg);
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  /* mobile sizing left as-is — user confirmed it looks right */
+  .sprocket { width: 56%; height: 20px; border-radius: 4px; }
+  .reel-rail { gap: 18px; }
+  .reel-frame-mark { display: none; }
+}
+
+/* ---------------------------------------------------------------------------
+   Keys & images
+--------------------------------------------------------------------------- */
+kbd {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--color-ink-dim);
+}
+
+/* Principle 11: subtle pure-white image outline in dark mode */
+img {
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: -1px;
+}
+
+/* Texture button grain overlay — plain CSS to avoid fragile Tailwind
+   arbitrary-value URL escaping. */
+.btn-texture {
+  position: relative;
+  isolation: isolate;
+}
+.btn-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.14;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
