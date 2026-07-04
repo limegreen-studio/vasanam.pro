@@ -45,6 +45,7 @@ export function useTypingTest(dialogues: DialogueEntry[]) {
   const tickHandleRef = useRef<number | null>(null)
   const totalKeystrokesRef = useRef(0)
   const correctKeystrokesEverRef = useRef(0)
+  const hasFinishedRef = useRef(false)
 
   const pickDialogue = useCallback(() => {
     if (dialogues.length === 0) return
@@ -71,6 +72,7 @@ export function useTypingTest(dialogues: DialogueEntry[]) {
     startTimeRef.current = null
     totalKeystrokesRef.current = 0
     correctKeystrokesEverRef.current = 0
+    hasFinishedRef.current = false
     if (tickHandleRef.current) {
       window.clearInterval(tickHandleRef.current)
       tickHandleRef.current = null
@@ -93,6 +95,14 @@ export function useTypingTest(dialogues: DialogueEntry[]) {
 
   const finishTest = useCallback(
     (finalTyped: TypedChar[]) => {
+      // Guard against double-execution. The queueMicrotask() call that
+      // schedules this function lives inside a setState updater, which React
+      // 18 Strict Mode intentionally invokes twice in development to surface
+      // impure updaters. That double-invocation schedules two microtasks,
+      // both pointing here. The ref check is synchronous and therefore blocks
+      // the second call before any state mutation or history write occurs.
+      if (hasFinishedRef.current) return
+      hasFinishedRef.current = true
       setFinished(true)
       if (tickHandleRef.current) {
         window.clearInterval(tickHandleRef.current)
